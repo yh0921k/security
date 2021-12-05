@@ -11,4 +11,9 @@ public class SecurityController {
   public ResponseEntity<String> index() {
     return ResponseEntity.ok("Root");
   }
+
+  @GetMapping("/loginPage")
+  public String loginPage() {
+    return "loginPage";
+  }
 }
