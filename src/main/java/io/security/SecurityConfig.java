@@ -19,6 +19,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     http.formLogin();
 
-    http.sessionManagement().sessionFixation().changeSessionId();
+    http.sessionManagement().maximumSessions(1).maxSessionsPreventsLogin(true);
   }
 }
